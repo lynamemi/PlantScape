@@ -1,14 +1,168 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vyL-fb-Hhx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Black.ttf">
+            <string>Raleway-Black</string>
+        </array>
+        <array key="Raleway-LightItalic.ttf">
+            <string>Raleway-LightItalic</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Search-->
+        <scene sceneID="agQ-Gj-Syy">
+            <objects>
+                <viewController id="grf-iy-rSg" customClass="LocationSelectorViewController" customModule="PlantScape" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vgn-E7-XGN"/>
+                        <viewControllerLayoutGuide type="bottom" id="hQQ-i1-rBm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="heR-kK-8OH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-0p-bvR"/>
+                            <searchBar contentMode="redraw" placeholder="search for address" translatesAutoresizingMaskIntoConstraints="NO" id="2zf-TN-27H">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwz-Ut-gT7">
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="16"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="grf-iy-rSg" eventType="touchUpInside" id="Pec-Vp-x0u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the address you want to design for in the search bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-w2-eqM">
+                                <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2zf-TN-27H" firstAttribute="top" secondItem="K6p-0p-bvR" secondAttribute="bottom" id="0uH-uo-wda"/>
+                            <constraint firstItem="Mra-w2-eqM" firstAttribute="leading" secondItem="heR-kK-8OH" secondAttribute="leadingMargin" constant="24" id="7JF-oo-PYs"/>
+                            <constraint firstAttribute="trailing" secondItem="K6p-0p-bvR" secondAttribute="trailing" id="Jb6-uL-hVc"/>
+                            <constraint firstAttribute="trailing" secondItem="2zf-TN-27H" secondAttribute="trailing" id="RgH-KC-PsF"/>
+                            <constraint firstItem="Mra-w2-eqM" firstAttribute="top" secondItem="2zf-TN-27H" secondAttribute="bottom" constant="23" id="TcE-Xp-o37"/>
+                            <constraint firstItem="2zf-TN-27H" firstAttribute="leading" secondItem="K6p-0p-bvR" secondAttribute="leading" id="Th4-xj-uod"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mra-w2-eqM" secondAttribute="trailing" constant="24" id="UUc-Ny-WQF"/>
+                            <constraint firstItem="K6p-0p-bvR" firstAttribute="top" secondItem="heR-kK-8OH" secondAttribute="top" id="WGb-t7-7uV"/>
+                            <constraint firstItem="Mra-w2-eqM" firstAttribute="top" secondItem="K6p-0p-bvR" secondAttribute="bottom" constant="66" id="cFG-k7-9k3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vwz-Ut-gT7" secondAttribute="trailing" constant="129" id="crz-RJ-6Eb"/>
+                            <constraint firstItem="2zf-TN-27H" firstAttribute="leading" secondItem="heR-kK-8OH" secondAttribute="leading" id="e2a-VO-q1k"/>
+                            <constraint firstItem="hQQ-i1-rBm" firstAttribute="top" secondItem="Vwz-Ut-gT7" secondAttribute="bottom" constant="20" id="hlh-Zb-mXO"/>
+                            <constraint firstItem="K6p-0p-bvR" firstAttribute="leading" secondItem="heR-kK-8OH" secondAttribute="leading" id="mfG-sl-A5H"/>
+                            <constraint firstItem="Vwz-Ut-gT7" firstAttribute="top" secondItem="Mra-w2-eqM" secondAttribute="bottom" constant="26" id="tcg-t4-A6t"/>
+                            <constraint firstItem="Vwz-Ut-gT7" firstAttribute="leading" secondItem="heR-kK-8OH" secondAttribute="leadingMargin" constant="129" id="xrE-Sj-10l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="8Nh-q9-U6z"/>
+                    <connections>
+                        <outlet property="addressSearchBar" destination="2zf-TN-27H" id="AFE-dj-wXi"/>
+                        <outlet property="locationSelectorMapView" destination="K6p-0p-bvR" id="wsu-XK-yHs"/>
+                        <outlet property="searchDisplayController" destination="2fI-q9-ph5" id="QGy-JQ-2E6"/>
+                        <outlet property="searchedAddressLabel" destination="Mra-w2-eqM" id="L4g-dk-QWY"/>
+                        <segue destination="BKJ-0E-7hS" kind="show" identifier="Draw" id="GTc-DK-VVj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="de5-LT-HD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="2fI-q9-ph5">
+                    <connections>
+                        <outlet property="delegate" destination="grf-iy-rSg" id="Ub4-LX-Gqm"/>
+                        <outlet property="searchContentsController" destination="grf-iy-rSg" id="CCM-dU-YAv"/>
+                        <outlet property="searchResultsDataSource" destination="grf-iy-rSg" id="qMR-fw-maN"/>
+                        <outlet property="searchResultsDelegate" destination="grf-iy-rSg" id="T99-HS-Ag4"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-142" y="124"/>
+        </scene>
+        <!--Draw-->
+        <scene sceneID="2dZ-We-kGj">
+            <objects>
+                <viewController title="Draw" id="BKJ-0E-7hS" customClass="DrawSpaceViewController" customModule="PlantScape" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gXJ-P0-qjN"/>
+                        <viewControllerLayoutGuide type="bottom" id="W8Z-Kw-zZg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RuX-aj-0Cl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GAK-Me-5Bd"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnG-2x-7ft">
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="qOx-1K-GE3"/>
+                                </constraints>
+                                <state key="normal" title="Clear Drawing">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="BKJ-0E-7hS" eventType="touchUpInside" id="rOj-Yf-CQz"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zD8-Qd-AoG">
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="C60-AH-Rrz"/>
+                                </constraints>
+                                <state key="normal" title="Save Drawing">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDrawingButtonPressed:" destination="BKJ-0E-7hS" eventType="touchUpInside" id="Rti-bj-lXw"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Ik-k08">
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="hoJ-9h-UG5"/>
+                                </constraints>
+                                <state key="normal" title="Brush Color">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="brushColorButtonPressed:" destination="BKJ-0E-7hS" eventType="touchUpInside" id="SKT-y2-gfi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GAK-Me-5Bd" firstAttribute="top" secondItem="e25-Ik-k08" secondAttribute="bottom" constant="-38" id="48m-tp-MJV"/>
+                            <constraint firstItem="GAK-Me-5Bd" firstAttribute="leading" secondItem="e25-Ik-k08" secondAttribute="trailing" constant="-134" id="8rk-a6-rK8"/>
+                            <constraint firstItem="zD8-Qd-AoG" firstAttribute="centerX" secondItem="GAK-Me-5Bd" secondAttribute="centerX" id="9Jj-RN-h7E"/>
+                            <constraint firstItem="GAK-Me-5Bd" firstAttribute="top" secondItem="RuX-aj-0Cl" secondAttribute="top" constant="64" id="JvT-Eg-FLc"/>
+                            <constraint firstItem="GAK-Me-5Bd" firstAttribute="top" secondItem="vnG-2x-7ft" secondAttribute="bottom" constant="-38" id="Obm-8H-9fX"/>
+                            <constraint firstItem="zD8-Qd-AoG" firstAttribute="top" secondItem="GAK-Me-5Bd" secondAttribute="bottom" constant="-63" id="XKs-ty-D07"/>
+                            <constraint firstAttribute="trailing" secondItem="GAK-Me-5Bd" secondAttribute="trailing" id="alK-2x-jCR"/>
+                            <constraint firstItem="W8Z-Kw-zZg" firstAttribute="top" secondItem="GAK-Me-5Bd" secondAttribute="bottom" id="hxN-f1-LnL"/>
+                            <constraint firstItem="vnG-2x-7ft" firstAttribute="leading" secondItem="GAK-Me-5Bd" secondAttribute="trailing" constant="-134" id="wOp-j4-ap3"/>
+                            <constraint firstItem="GAK-Me-5Bd" firstAttribute="leading" secondItem="RuX-aj-0Cl" secondAttribute="leading" id="yo5-Ty-sec"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawImageView" destination="GAK-Me-5Bd" id="eII-Ma-r2f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgy-Sf-dgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613.60000000000002" y="123.68815592203899"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlantScape" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,6 +175,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-882" y="909"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JtJ-I6-gxe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vyL-fb-Hhx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pQf-e2-cMi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="grf-iy-rSg" kind="relationship" relationship="rootViewController" id="ax6-vE-HCI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sU8-Ot-A1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-882.39999999999998" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

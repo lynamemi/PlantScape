@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FD9786102992AA4E67C1A22 /* Pods_PlantScape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5ADD800BB0C9A873F69A2E9 /* Pods_PlantScape.framework */; };
+		A82E5CFF1D9B145000A3C867 /* LocationSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E5CFE1D9B145000A3C867 /* LocationSelectorViewController.swift */; };
+		A82E5D011D9B176900A3C867 /* Raleway in Resources */ = {isa = PBXBuildFile; fileRef = A82E5D001D9B176900A3C867 /* Raleway */; };
+		A85F89E41D9C1AEE006E66EC /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D21D9C1AEE006E66EC /* Raleway-Black.ttf */; };
+		A85F89E51D9C1AEE006E66EC /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D31D9C1AEE006E66EC /* Raleway-BlackItalic.ttf */; };
+		A85F89E61D9C1AEE006E66EC /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D41D9C1AEE006E66EC /* Raleway-Bold.ttf */; };
+		A85F89E71D9C1AEE006E66EC /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D51D9C1AEE006E66EC /* Raleway-BoldItalic.ttf */; };
+		A85F89E81D9C1AEE006E66EC /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D61D9C1AEE006E66EC /* Raleway-ExtraBold.ttf */; };
+		A85F89E91D9C1AEE006E66EC /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D71D9C1AEE006E66EC /* Raleway-ExtraBoldItalic.ttf */; };
+		A85F89EA1D9C1AEE006E66EC /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D81D9C1AEE006E66EC /* Raleway-ExtraLight.ttf */; };
+		A85F89EB1D9C1AEE006E66EC /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89DA1D9C1AEE006E66EC /* Raleway-Italic.ttf */; };
+		A85F89EC1D9C1AEE006E66EC /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89DB1D9C1AEE006E66EC /* Raleway-Light.ttf */; };
+		A85F89ED1D9C1AEE006E66EC /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89DC1D9C1AEE006E66EC /* Raleway-LightItalic.ttf */; };
+		A85F89EE1D9C1AEE006E66EC /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89DD1D9C1AEE006E66EC /* Raleway-Medium.ttf */; };
+		A85F89EF1D9C1AEE006E66EC /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89DE1D9C1AEE006E66EC /* Raleway-MediumItalic.ttf */; };
+		A85F89F01D9C1AEF006E66EC /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89DF1D9C1AEE006E66EC /* Raleway-Regular.ttf */; };
+		A85F89F11D9C1AEF006E66EC /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89E01D9C1AEE006E66EC /* Raleway-SemiBold.ttf */; };
+		A85F89F21D9C1AEF006E66EC /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89E11D9C1AEE006E66EC /* Raleway-SemiBoldItalic.ttf */; };
+		A85F89F31D9C1AEF006E66EC /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89E21D9C1AEE006E66EC /* Raleway-Thin.ttf */; };
+		A85F89F41D9C1AEF006E66EC /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89E31D9C1AEE006E66EC /* Raleway-ThinItalic.ttf */; };
+		A85F89F71D9C2B3A006E66EC /* DrawSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89F61D9C2B3A006E66EC /* DrawSpaceViewController.swift */; };
+		A85F89F91D9C2B68006E66EC /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89F81D9C2B68006E66EC /* DrawView.swift */; };
+		A85F89FB1D9C2CB0006E66EC /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89FA1D9C2CB0006E66EC /* Line.swift */; };
+		A88804F91D9987F400D43797 /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88804F81D9987F400D43797 /* SwiftCSV.framework */; };
+		A88804FD1D99E28000D43797 /* usdaPlantsEdited.csv in Resources */ = {isa = PBXBuildFile; fileRef = A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */; };
 		A8CA88B21D98862B006F76B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88B11D98862B006F76B5 /* AppDelegate.swift */; };
 		A8CA88B41D98862B006F76B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88B31D98862B006F76B5 /* ViewController.swift */; };
 		A8CA88B71D98862B006F76B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CA88B51D98862B006F76B5 /* Main.storyboard */; };
@@ -15,6 +40,7 @@
 		A8CA88BF1D98862B006F76B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CA88BD1D98862B006F76B5 /* LaunchScreen.storyboard */; };
 		A8CA88CA1D98862B006F76B5 /* PlantScapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88C91D98862B006F76B5 /* PlantScapeTests.swift */; };
 		A8CA88D51D98862C006F76B5 /* PlantScapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88D41D98862C006F76B5 /* PlantScapeUITests.swift */; };
+		A8DE89CB1D99706000A380AB /* PlantCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE89CA1D99706000A380AB /* PlantCSV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +61,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A42327F19A8CE672BDCF2CF /* Pods-PlantScape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantScape.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantScape/Pods-PlantScape.debug.xcconfig"; sourceTree = "<group>"; };
+		58E01876F805C2269B405374 /* Pods_PlantScapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantScapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7152AC30073DD0219D2C94D2 /* Pods-PlantScape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantScape.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantScape/Pods-PlantScape.release.xcconfig"; sourceTree = "<group>"; };
+		A82E5CFE1D9B145000A3C867 /* LocationSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSelectorViewController.swift; sourceTree = "<group>"; };
+		A82E5D001D9B176900A3C867 /* Raleway */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Raleway; sourceTree = SOURCE_ROOT; };
+		A85F89D21D9C1AEE006E66EC /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Black.ttf"; path = "Raleway/Raleway-Black.ttf"; sourceTree = "<group>"; };
+		A85F89D31D9C1AEE006E66EC /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BlackItalic.ttf"; path = "Raleway/Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A85F89D41D9C1AEE006E66EC /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "Raleway/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		A85F89D51D9C1AEE006E66EC /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BoldItalic.ttf"; path = "Raleway/Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A85F89D61D9C1AEE006E66EC /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "Raleway/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A85F89D71D9C1AEE006E66EC /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBoldItalic.ttf"; path = "Raleway/Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A85F89D81D9C1AEE006E66EC /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "Raleway/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A85F89D91D9C1AEE006E66EC /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLightItalic.ttf"; path = "Raleway/Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		A85F89DA1D9C1AEE006E66EC /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Italic.ttf"; path = "Raleway/Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		A85F89DB1D9C1AEE006E66EC /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		A85F89DC1D9C1AEE006E66EC /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-LightItalic.ttf"; path = "Raleway/Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		A85F89DD1D9C1AEE006E66EC /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		A85F89DE1D9C1AEE006E66EC /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-MediumItalic.ttf"; path = "Raleway/Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A85F89DF1D9C1AEE006E66EC /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		A85F89E01D9C1AEE006E66EC /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "Raleway/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		A85F89E11D9C1AEE006E66EC /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBoldItalic.ttf"; path = "Raleway/Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A85F89E21D9C1AEE006E66EC /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.ttf"; path = "Raleway/Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		A85F89E31D9C1AEE006E66EC /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ThinItalic.ttf"; path = "Raleway/Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		A85F89F61D9C2B3A006E66EC /* DrawSpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawSpaceViewController.swift; sourceTree = "<group>"; };
+		A85F89F81D9C2B68006E66EC /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		A85F89FA1D9C2CB0006E66EC /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		A88804F81D9987F400D43797 /* SwiftCSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCSV.framework; path = "build/Debug-iphoneos/SwiftCSV/SwiftCSV.framework"; sourceTree = SOURCE_ROOT; };
+		A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usdaPlantsEdited.csv; sourceTree = SOURCE_ROOT; };
 		A8CA88AE1D98862B006F76B5 /* PlantScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CA88B11D98862B006F76B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CA88B31D98862B006F76B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +103,9 @@
 		A8CA88D01D98862C006F76B5 /* PlantScapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantScapeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CA88D41D98862C006F76B5 /* PlantScapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantScapeUITests.swift; sourceTree = "<group>"; };
 		A8CA88D61D98862C006F76B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8DE89CA1D99706000A380AB /* PlantCSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCSV.swift; sourceTree = "<group>"; };
+		B5ADD800BB0C9A873F69A2E9 /* Pods_PlantScape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantScape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F04C80DAB5475374725889 /* Pods_PlantScapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantScapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88804F91D9987F400D43797 /* SwiftCSV.framework in Frameworks */,
+				9FD9786102992AA4E67C1A22 /* Pods_PlantScape.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +135,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25AAFE2A160E6387FCFC2589 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A42327F19A8CE672BDCF2CF /* Pods-PlantScape.debug.xcconfig */,
+				7152AC30073DD0219D2C94D2 /* Pods-PlantScape.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C85006A910F40CBB97DF533 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A88804F81D9987F400D43797 /* SwiftCSV.framework */,
+				B5ADD800BB0C9A873F69A2E9 /* Pods_PlantScape.framework */,
+				58E01876F805C2269B405374 /* Pods_PlantScapeTests.framework */,
+				D0F04C80DAB5475374725889 /* Pods_PlantScapeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A85F89F51D9C1B7B006E66EC /* Raleway */ = {
+			isa = PBXGroup;
+			children = (
+				A85F89D21D9C1AEE006E66EC /* Raleway-Black.ttf */,
+				A85F89D31D9C1AEE006E66EC /* Raleway-BlackItalic.ttf */,
+				A85F89D41D9C1AEE006E66EC /* Raleway-Bold.ttf */,
+				A85F89D51D9C1AEE006E66EC /* Raleway-BoldItalic.ttf */,
+				A85F89D61D9C1AEE006E66EC /* Raleway-ExtraBold.ttf */,
+				A85F89D71D9C1AEE006E66EC /* Raleway-ExtraBoldItalic.ttf */,
+				A85F89D81D9C1AEE006E66EC /* Raleway-ExtraLight.ttf */,
+				A85F89D91D9C1AEE006E66EC /* Raleway-ExtraLightItalic.ttf */,
+				A85F89DA1D9C1AEE006E66EC /* Raleway-Italic.ttf */,
+				A85F89DB1D9C1AEE006E66EC /* Raleway-Light.ttf */,
+				A85F89DC1D9C1AEE006E66EC /* Raleway-LightItalic.ttf */,
+				A85F89DD1D9C1AEE006E66EC /* Raleway-Medium.ttf */,
+				A85F89DE1D9C1AEE006E66EC /* Raleway-MediumItalic.ttf */,
+				A85F89DF1D9C1AEE006E66EC /* Raleway-Regular.ttf */,
+				A85F89E01D9C1AEE006E66EC /* Raleway-SemiBold.ttf */,
+				A85F89E11D9C1AEE006E66EC /* Raleway-SemiBoldItalic.ttf */,
+				A85F89E21D9C1AEE006E66EC /* Raleway-Thin.ttf */,
+				A85F89E31D9C1AEE006E66EC /* Raleway-ThinItalic.ttf */,
+			);
+			name = Raleway;
+			sourceTree = "<group>";
+		};
 		A8CA88A51D98862B006F76B5 = {
 			isa = PBXGroup;
 			children = (
+				A85F89F51D9C1B7B006E66EC /* Raleway */,
 				A8CA88B01D98862B006F76B5 /* PlantScape */,
 				A8CA88C81D98862B006F76B5 /* PlantScapeTests */,
 				A8CA88D31D98862C006F76B5 /* PlantScapeUITests */,
 				A8CA88AF1D98862B006F76B5 /* Products */,
+				25AAFE2A160E6387FCFC2589 /* Pods */,
+				8C85006A910F40CBB97DF533 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +208,14 @@
 			children = (
 				A8CA88B11D98862B006F76B5 /* AppDelegate.swift */,
 				A8CA88B31D98862B006F76B5 /* ViewController.swift */,
+				A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */,
+				A8DE89CA1D99706000A380AB /* PlantCSV.swift */,
 				A8CA88B51D98862B006F76B5 /* Main.storyboard */,
+				A85F89F81D9C2B68006E66EC /* DrawView.swift */,
+				A85F89FA1D9C2CB0006E66EC /* Line.swift */,
+				A85F89F61D9C2B3A006E66EC /* DrawSpaceViewController.swift */,
+				A82E5D001D9B176900A3C867 /* Raleway */,
+				A82E5CFE1D9B145000A3C867 /* LocationSelectorViewController.swift */,
 				A8CA88BB1D98862B006F76B5 /* Assets.xcassets */,
 				A8CA88BD1D98862B006F76B5 /* LaunchScreen.storyboard */,
 				A8CA88C01D98862B006F76B5 /* Info.plist */,
@@ -135,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8CA88D91D98862C006F76B5 /* Build configuration list for PBXNativeTarget "PlantScape" */;
 			buildPhases = (
+				8E071EB4B5E0EF8A0B04FFD2 /* [CP] Check Pods Manifest.lock */,
 				A8CA88AA1D98862B006F76B5 /* Sources */,
 				A8CA88AB1D98862B006F76B5 /* Frameworks */,
 				A8CA88AC1D98862B006F76B5 /* Resources */,
+				82B5F284F6BD353E225B7AE2 /* [CP] Embed Pods Frameworks */,
+				09C4841FF626F9C7710A1D38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +355,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85F89E41D9C1AEE006E66EC /* Raleway-Black.ttf in Resources */,
+				A85F89E51D9C1AEE006E66EC /* Raleway-BlackItalic.ttf in Resources */,
+				A85F89E61D9C1AEE006E66EC /* Raleway-Bold.ttf in Resources */,
+				A85F89E71D9C1AEE006E66EC /* Raleway-BoldItalic.ttf in Resources */,
+				A85F89E81D9C1AEE006E66EC /* Raleway-ExtraBold.ttf in Resources */,
+				A85F89E91D9C1AEE006E66EC /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				A85F89EA1D9C1AEE006E66EC /* Raleway-ExtraLight.ttf in Resources */,
+				A85F89EB1D9C1AEE006E66EC /* Raleway-Italic.ttf in Resources */,
+				A85F89EC1D9C1AEE006E66EC /* Raleway-Light.ttf in Resources */,
+				A85F89ED1D9C1AEE006E66EC /* Raleway-LightItalic.ttf in Resources */,
+				A85F89EE1D9C1AEE006E66EC /* Raleway-Medium.ttf in Resources */,
+				A85F89EF1D9C1AEE006E66EC /* Raleway-MediumItalic.ttf in Resources */,
+				A85F89F01D9C1AEF006E66EC /* Raleway-Regular.ttf in Resources */,
+				A85F89F11D9C1AEF006E66EC /* Raleway-SemiBold.ttf in Resources */,
+				A85F89F21D9C1AEF006E66EC /* Raleway-SemiBoldItalic.ttf in Resources */,
+				A85F89F31D9C1AEF006E66EC /* Raleway-Thin.ttf in Resources */,
+				A85F89F41D9C1AEF006E66EC /* Raleway-ThinItalic.ttf in Resources */,
+				A88804FD1D99E28000D43797 /* usdaPlantsEdited.csv in Resources */,
+				A82E5D011D9B176900A3C867 /* Raleway in Resources */,
 				A8CA88BF1D98862B006F76B5 /* LaunchScreen.storyboard in Resources */,
 				A8CA88BC1D98862B006F76B5 /* Assets.xcassets in Resources */,
 				A8CA88B71D98862B006F76B5 /* Main.storyboard in Resources */,
@@ -260,14 +396,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09C4841FF626F9C7710A1D38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlantScape/Pods-PlantScape-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82B5F284F6BD353E225B7AE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlantScape/Pods-PlantScape-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E071EB4B5E0EF8A0B04FFD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A8CA88AA1D98862B006F76B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DE89CB1D99706000A380AB /* PlantCSV.swift in Sources */,
+				A85F89F71D9C2B3A006E66EC /* DrawSpaceViewController.swift in Sources */,
+				A85F89F91D9C2B68006E66EC /* DrawView.swift in Sources */,
 				A8CA88B41D98862B006F76B5 /* ViewController.swift in Sources */,
 				A8CA88B21D98862B006F76B5 /* AppDelegate.swift in Sources */,
+				A85F89FB1D9C2CB0006E66EC /* Line.swift in Sources */,
 				A8CA88BA1D98862B006F76B5 /* PlantScape.xcdatamodeld in Sources */,
+				A82E5CFF1D9B145000A3C867 /* LocationSelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +606,7 @@
 		};
 		A8CA88DA1D98862C006F76B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A42327F19A8CE672BDCF2CF /* Pods-PlantScape.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X72T4D323B;
@@ -430,6 +620,7 @@
 		};
 		A8CA88DB1D98862C006F76B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7152AC30073DD0219D2C94D2 /* Pods-PlantScape.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X72T4D323B;
@@ -518,6 +709,7 @@
 				A8CA88DB1D98862C006F76B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8CA88DC1D98862C006F76B5 /* Build configuration list for PBXNativeTarget "PlantScapeTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +718,7 @@
 				A8CA88DE1D98862C006F76B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8CA88DF1D98862C006F76B5 /* Build configuration list for PBXNativeTarget "PlantScapeUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +727,7 @@
 				A8CA88E11D98862C006F76B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
