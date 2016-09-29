@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9FD9786102992AA4E67C1A22 /* Pods_PlantScape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5ADD800BB0C9A873F69A2E9 /* Pods_PlantScape.framework */; };
+		A82A94C51D9D82FD001E4D33 /* PlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A94C41D9D82FD001E4D33 /* PlantClass.swift */; };
 		A82E5CFF1D9B145000A3C867 /* LocationSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E5CFE1D9B145000A3C867 /* LocationSelectorViewController.swift */; };
 		A82E5D011D9B176900A3C867 /* Raleway in Resources */ = {isa = PBXBuildFile; fileRef = A82E5D001D9B176900A3C867 /* Raleway */; };
 		A85F89E41D9C1AEE006E66EC /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85F89D21D9C1AEE006E66EC /* Raleway-Black.ttf */; };
@@ -30,6 +31,9 @@
 		A85F89F71D9C2B3A006E66EC /* DrawSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89F61D9C2B3A006E66EC /* DrawSpaceViewController.swift */; };
 		A85F89F91D9C2B68006E66EC /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89F81D9C2B68006E66EC /* DrawView.swift */; };
 		A85F89FB1D9C2CB0006E66EC /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89FA1D9C2CB0006E66EC /* Line.swift */; };
+		A85F89FD1D9C94B2006E66EC /* PlantFiltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89FC1D9C94B2006E66EC /* PlantFiltersTableViewController.swift */; };
+		A85F89FF1D9C96C1006E66EC /* CustomPlantFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F89FE1D9C96C1006E66EC /* CustomPlantFilterCell.swift */; };
+		A8876B7C1D9CA066007F7864 /* CustomPlantFilterCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8876B7B1D9CA066007F7864 /* CustomPlantFilterCellDelegate.swift */; };
 		A88804F91D9987F400D43797 /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88804F81D9987F400D43797 /* SwiftCSV.framework */; };
 		A88804FD1D99E28000D43797 /* usdaPlantsEdited.csv in Resources */ = {isa = PBXBuildFile; fileRef = A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */; };
 		A8CA88B21D98862B006F76B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88B11D98862B006F76B5 /* AppDelegate.swift */; };
@@ -64,6 +68,7 @@
 		2A42327F19A8CE672BDCF2CF /* Pods-PlantScape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantScape.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantScape/Pods-PlantScape.debug.xcconfig"; sourceTree = "<group>"; };
 		58E01876F805C2269B405374 /* Pods_PlantScapeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantScapeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7152AC30073DD0219D2C94D2 /* Pods-PlantScape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantScape.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantScape/Pods-PlantScape.release.xcconfig"; sourceTree = "<group>"; };
+		A82A94C41D9D82FD001E4D33 /* PlantClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantClass.swift; sourceTree = "<group>"; };
 		A82E5CFE1D9B145000A3C867 /* LocationSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSelectorViewController.swift; sourceTree = "<group>"; };
 		A82E5D001D9B176900A3C867 /* Raleway */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Raleway; sourceTree = SOURCE_ROOT; };
 		A85F89D21D9C1AEE006E66EC /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Black.ttf"; path = "Raleway/Raleway-Black.ttf"; sourceTree = "<group>"; };
@@ -87,6 +92,9 @@
 		A85F89F61D9C2B3A006E66EC /* DrawSpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawSpaceViewController.swift; sourceTree = "<group>"; };
 		A85F89F81D9C2B68006E66EC /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		A85F89FA1D9C2CB0006E66EC /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		A85F89FC1D9C94B2006E66EC /* PlantFiltersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantFiltersTableViewController.swift; sourceTree = "<group>"; };
+		A85F89FE1D9C96C1006E66EC /* CustomPlantFilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPlantFilterCell.swift; sourceTree = "<group>"; };
+		A8876B7B1D9CA066007F7864 /* CustomPlantFilterCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPlantFilterCellDelegate.swift; sourceTree = "<group>"; };
 		A88804F81D9987F400D43797 /* SwiftCSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCSV.framework; path = "build/Debug-iphoneos/SwiftCSV/SwiftCSV.framework"; sourceTree = SOURCE_ROOT; };
 		A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usdaPlantsEdited.csv; sourceTree = SOURCE_ROOT; };
 		A8CA88AE1D98862B006F76B5 /* PlantScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,11 +219,15 @@
 				A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */,
 				A8DE89CA1D99706000A380AB /* PlantCSV.swift */,
 				A8CA88B51D98862B006F76B5 /* Main.storyboard */,
+				A8876B7B1D9CA066007F7864 /* CustomPlantFilterCellDelegate.swift */,
+				A85F89FE1D9C96C1006E66EC /* CustomPlantFilterCell.swift */,
+				A85F89FC1D9C94B2006E66EC /* PlantFiltersTableViewController.swift */,
 				A85F89F81D9C2B68006E66EC /* DrawView.swift */,
 				A85F89FA1D9C2CB0006E66EC /* Line.swift */,
 				A85F89F61D9C2B3A006E66EC /* DrawSpaceViewController.swift */,
 				A82E5D001D9B176900A3C867 /* Raleway */,
 				A82E5CFE1D9B145000A3C867 /* LocationSelectorViewController.swift */,
+				A82A94C41D9D82FD001E4D33 /* PlantClass.swift */,
 				A8CA88BB1D98862B006F76B5 /* Assets.xcassets */,
 				A8CA88BD1D98862B006F76B5 /* LaunchScreen.storyboard */,
 				A8CA88C01D98862B006F76B5 /* Info.plist */,
@@ -453,8 +465,12 @@
 				A85F89F71D9C2B3A006E66EC /* DrawSpaceViewController.swift in Sources */,
 				A85F89F91D9C2B68006E66EC /* DrawView.swift in Sources */,
 				A8CA88B41D98862B006F76B5 /* ViewController.swift in Sources */,
+				A82A94C51D9D82FD001E4D33 /* PlantClass.swift in Sources */,
 				A8CA88B21D98862B006F76B5 /* AppDelegate.swift in Sources */,
+				A85F89FD1D9C94B2006E66EC /* PlantFiltersTableViewController.swift in Sources */,
+				A85F89FF1D9C96C1006E66EC /* CustomPlantFilterCell.swift in Sources */,
 				A85F89FB1D9C2CB0006E66EC /* Line.swift in Sources */,
+				A8876B7C1D9CA066007F7864 /* CustomPlantFilterCellDelegate.swift in Sources */,
 				A8CA88BA1D98862B006F76B5 /* PlantScape.xcdatamodeld in Sources */,
 				A82E5CFF1D9B145000A3C867 /* LocationSelectorViewController.swift in Sources */,
 			);

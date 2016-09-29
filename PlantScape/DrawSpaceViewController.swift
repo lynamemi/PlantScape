@@ -14,12 +14,13 @@ class DrawSpaceViewController: UIViewController {
     var swiped = false
     var color = UIColor.yellow.cgColor
     var imageDate = Double()
+    var drawnImageDate = Double()
+    var selectedState: String?
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var loadingAlertLabel: UILabel!
     @IBOutlet weak var drawImageView: UIImageView!
     @IBAction func clearButtonPressed(_ sender: UIButton) {
-        let currentContext = UIGraphicsGetCurrentContext()
-        currentContext?.clear(drawImageView.bounds)
-        currentContext?.flush()
         drawImageView.image = nil
     }
     @IBAction func brushColorButtonPressed(_ sender: UIButton) {
@@ -41,14 +42,19 @@ class DrawSpaceViewController: UIViewController {
         alert.addAction(changeBrushColorToYellow)
         present(alert, animated: true, completion: nil)
     }
-    @IBAction func saveDrawingButtonPressed(_ sender: UIButton) {
-    }
     
+    @IBAction func saveDrawingButtonPressed(_ sender: UIButton) {
+        loadingAlertLabel.text = "Please wait while we save your drawing and load your plant choices"
+        loadingAlertLabel.isHidden = false
+        saveDrawnImage()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(imageDate)
-        drawImageView.image = imageFromUrlString(double: imageDate)
+        backgroundImageView.image = imageFromUrlString(double: imageDate)
+        self.view.backgroundColor = UIColor.lightGray
+        loadingAlertLabel.isHidden = true
         
         // Do any additional setup after loading the view.
     }
@@ -94,7 +100,7 @@ class DrawSpaceViewController: UIViewController {
         // set stroke (with color)
         context?.setLineCap(CGLineCap.round)
         context?.setBlendMode(CGBlendMode.normal)
-        context?.setLineWidth(3)
+        context?.setLineWidth(5)
         context?.setStrokeColor(color)
         context?.strokePath()
         
@@ -115,6 +121,29 @@ class DrawSpaceViewController: UIViewController {
         return nil
     }
     
+    func saveDrawnImage() {
+        if let image = drawImageView.image {
+            drawnImageDate = NSDate().timeIntervalSince1970
+            let data = UIImagePNGRepresentation(image)
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            let path = "\(paths[0])/\(drawnImageDate as Double).png"
+            let url = URL(fileURLWithPath: path)
+            do {
+                try data?.write(to: url, options: .atomicWrite)
+                performSegue(withIdentifier: "PlantFilters", sender: -1)
+            } catch {
+                print(error)
+            }
+        } else {
+            print("doesn't like image")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PlantFiltersTableViewController
+        destination.drawnImageDate = drawnImageDate
+        destination.selectedState = selectedState
+    }
 
     /*
     // MARK: - Navigation

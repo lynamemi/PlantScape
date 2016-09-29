@@ -19,14 +19,14 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     var state = ""
-    var options = MKMapSnapshotOptions()
     var currentImageDate: Double?
     
     @IBOutlet weak var searchedAddressLabel: UILabel!
     @IBOutlet weak var addressSearchBar: UISearchBar!
     @IBOutlet weak var locationSelectorMapView: MKMapView!
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "Draw", sender: self)
+        self.currentImageDate = NSDate().timeIntervalSince1970
+        saveSnapshot(currentDate: currentImageDate!)
     }
     
     override func viewDidLoad() {
@@ -80,11 +80,17 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
                 if (placemarks?.count)! > 0 {
                     let pm = placemarks![0]
                     // add conditional for not states
-                    self.state = pm.addressDictionary?["State"] as! String
+                    if let tempState = pm.addressDictionary?["State"] as? String {
+                        self.state = tempState
+                        self.searchedAddressLabel.textColor = UIColor.black
+                    } else {
+                        self.searchedAddressLabel.text = "Please select an address in the United States"
+                        self.searchedAddressLabel.textColor = UIColor.red
+                    }
                     print(self.state)
                 }
                 else {
-//                    print("Problem with the data received from geocoder")
+                    print("Problem with the data received from geocoder")
                 }
             })
             
@@ -95,13 +101,18 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
             let region = MKCoordinateRegionMake(self.pointAnnotation.coordinate, span)
             self.locationSelectorMapView.setRegion(region, animated: true)
         }
-
         
     }
 
     
     func saveSnapshot(currentDate: Double) {
-        let snapshotter = MKMapSnapshotter()
+        let options = MKMapSnapshotOptions()
+        options.region = locationSelectorMapView.region
+        options.scale = UIScreen.main.scale
+        options.size = locationSelectorMapView.frame.size
+        options.mapType = locationSelectorMapView.mapType
+        
+        let snapshotter = MKMapSnapshotter(options: options)
         snapshotter.start { (snapshot, error) in
             if self.error != nil {
                 print(self.error)
@@ -110,13 +121,12 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
             let image = snapshot?.image
             let data = UIImagePNGRepresentation(image!)
             let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-            let path = "\(paths[0])/\(currentDate as Double).png"
+            let path = "\(paths[0])/\(self.currentImageDate! as Double).png"
             print(path)
             let url = URL(fileURLWithPath: path)
             do {
                 try data?.write(to: url, options: .atomicWrite)
-                // call some sort of func
-                //
+                self.performSegue(withIdentifier: "Draw", sender: self.currentImageDate)
             } catch {
                 print(error)
             }
@@ -124,16 +134,9 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        self.currentImageDate = NSDate().timeIntervalSince1970
-        
-        
         let destination = segue.destination as! DrawSpaceViewController
-        
-        saveSnapshot(currentDate: currentImageDate!) // pass in a handler
-        
         destination.imageDate = currentImageDate!
-        print(currentImageDate)
-        // snapshot handler
+        destination.selectedState = state
     }
     
     /*
