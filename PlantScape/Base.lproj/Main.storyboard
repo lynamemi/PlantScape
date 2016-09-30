@@ -28,23 +28,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-0p-bvR">
+<<<<<<< creating_plantList_class
                                 <frame key="frameInset" width="1000" height="1000"/>
                             </mapView>
                             <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="search for address" translatesAutoresizingMaskIntoConstraints="NO" id="2zf-TN-27H">
                                 <frame key="frameInset" width="1000" height="1000"/>
+=======
+                                <frame key="frameInset" width="375" height="440"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="search for address" translatesAutoresizingMaskIntoConstraints="NO" id="2zf-TN-27H">
+                                <frame key="frameInset" minY="440" width="375" height="43"/>
+>>>>>>> local
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="bqq-gO-Nsj"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter the address you want to design for in the search bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-w2-eqM">
+<<<<<<< creating_plantList_class
                                 <frame key="frameInset" width="1000" height="1000"/>
+=======
+                                <frame key="frameInset" minX="40" minY="506" width="295" height="84"/>
+>>>>>>> local
                                 <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwz-Ut-gT7">
+<<<<<<< creating_plantList_class
                                 <frame key="frameInset" width="1000" height="1000"/>
+=======
+                                <frame key="frameInset" minX="145" minY="617" width="85" height="30"/>
+>>>>>>> local
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="DFc-ig-KHt"/>
