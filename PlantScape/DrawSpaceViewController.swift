@@ -16,9 +16,11 @@ class DrawSpaceViewController: UIViewController {
     var imageDate = Double()
     var drawnImageDate = Double()
     var selectedState: String?
+    var newPlants: PlantList?
     
+    
+    @IBOutlet weak var waitingForCSV: UIActivityIndicatorView!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var loadingAlertLabel: UILabel!
     @IBOutlet weak var drawImageView: UIImageView!
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         drawImageView.image = nil
@@ -44,9 +46,15 @@ class DrawSpaceViewController: UIViewController {
     }
     
     @IBAction func saveDrawingButtonPressed(_ sender: UIButton) {
-        loadingAlertLabel.text = "Please wait while we save your drawing and load your plant choices"
-        loadingAlertLabel.isHidden = false
-        saveDrawnImage()
+        waitingForCSV.startAnimating()
+        waitingForCSV.isHidden = false
+        newPlants?.whenReady {
+            self.waitingForCSV.isHidden = true
+            self.waitingForCSV.stopAnimating()
+            DispatchQueue.main.async {
+                self.saveDrawnImageAndSegue()
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -54,8 +62,7 @@ class DrawSpaceViewController: UIViewController {
         print(imageDate)
         backgroundImageView.image = imageFromUrlString(double: imageDate)
         self.view.backgroundColor = UIColor.lightGray
-        loadingAlertLabel.isHidden = true
-        
+        waitingForCSV.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -121,7 +128,7 @@ class DrawSpaceViewController: UIViewController {
         return nil
     }
     
-    func saveDrawnImage() {
+    func saveDrawnImageAndSegue() {
         if let image = drawImageView.image {
             drawnImageDate = NSDate().timeIntervalSince1970
             let data = UIImagePNGRepresentation(image)
@@ -143,6 +150,7 @@ class DrawSpaceViewController: UIViewController {
         let destination = segue.destination as! PlantFiltersTableViewController
         destination.drawnImageDate = drawnImageDate
         destination.selectedState = selectedState
+        destination.newPlants = newPlants
     }
 
     /*

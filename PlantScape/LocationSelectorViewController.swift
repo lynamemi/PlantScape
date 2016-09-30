@@ -20,6 +20,8 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
     var pinAnnotationView:MKPinAnnotationView!
     var state = ""
     var currentImageDate: Double?
+    var newPlants: PlantList?
+
     
     @IBOutlet weak var searchedAddressLabel: UILabel!
     @IBOutlet weak var addressSearchBar: UISearchBar!
@@ -34,7 +36,7 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
         addressSearchBar.delegate = self
         locationSelectorMapView.delegate = self
         locationSelectorMapView.mapType = MKMapType.satellite
-        // Do any additional setup after loading the view.
+        newPlants = PlantList()
     }
 
     override func didReceiveMemoryWarning() {
@@ -137,6 +139,7 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate, MKM
         let destination = segue.destination as! DrawSpaceViewController
         destination.imageDate = currentImageDate!
         destination.selectedState = state
+        destination.newPlants = newPlants
     }
     
     /*

@@ -10,82 +10,79 @@ import UIKit; import SwiftCSV
 
 class PlantFiltersTableViewController: UITableViewController, CustomPlantFilterCellDelegate {
     
-    var listOfDicts = [Plant]()
     var countPlants = 0
     let filterOptions = ["Drought Tolerant", "Shade Loving", "Evergreen"]
     var selectedState: String?
     var drawnImageDate: Double?
+    var newPlants: PlantList?
+    var currentRandomTrees: [Plant]?
+    var currentRandomShrubs: [Plant]?
+    var currentRandomGrasses: [Plant]?
+    var allRandomPlants: [Plant]?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(selectedState!)
-        // read csv file
-        print("FIRST")
-        let csvURL = Bundle(for: ViewController.self).url(forResource: "usdaPlantsEdited", withExtension: "csv")!
-        print("SECOND")
-        do {
-            let csv = try CSV(url: csvURL as NSURL)
-            print("THIRD")
-            csv.enumerateAsDict () { dict in
-//                print(arr)
-//                self.countPlants += 1
-//                if self.countPlants < 11 {
-//                    print(arr)
-//                self.listOfDicts.append(dict)
-//                } else {
-//                    return
-//                }
-                let plant = Plant(droughtTolerant: dict["DroughtTolerance"]!, shadeLoving: dict["ShadeTolerance"]!, evergreen: dict["LeafRetention"]!, growthHabit: dict["GrowthHabit"]!, states: dict["State"]!)
-                self.listOfDicts.append(plant)
-            }
-            print("FORTH")
-            print(listOfDicts[1].growthHabit)
-        } catch {
-            print(error)
-        }
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        pickRandomGrass()
+        pickRandomShrub()
+        pickRandomTree()
     }
     
-    // PLANT FILTERING FUNCTIONS
-//    func filterHighDroughtTolerance() {
-//        let filteredDict = listOfDicts.filter {
-//            dict in
-//            return dict["DroughtTolerance"] == "High" || dict["DroughtTolerance"] == "Medium"
-//        }
-//        print(filteredDict)
-//    }
-//    func filterShadeTolerance() {
-//        let filteredDict = listOfDicts.filter {
-//            dict in
-//            return dict["ShadeTolerance"] == "Tolerant"
-//        }
-//        print(filteredDict)
-//    }
-//    func filterLeafRetention() {
-//        let filteredDict = listOfDicts.filter {
-//            dict in
-//            return dict["LeafRetention"] == "Yes"
-//        }
-//        print(filteredDict)
-//    }
+    func pickRandomTree() {
+        let trees = newPlants?.filterTree()
+        let randomTreeIndex = Int(arc4random_uniform(UInt32(UInt(trees!.count))))
+        let currentTree = trees![randomTreeIndex]
+        for tree in currentRandomTrees! {
+            if tree.id != currentTree.id {
+                currentRandomTrees?.append(currentTree)
+                allRandomPlants?.append(currentTree)
+            } else {
+                pickRandomTree()
+            }
+        }
+    }
+    func pickRandomShrub() {
+        let shrubs = newPlants?.filterShub()
+        let randomShrubIndex = Int(arc4random_uniform(UInt32(UInt(shrubs!.count))))
+        let currentShrub = shrubs![randomShrubIndex]
+        for shrub in currentRandomShrubs! {
+            if shrub.id != currentShrub.id {
+                currentRandomShrubs?.append(currentShrub)
+                allRandomPlants?.append(currentShrub)
+            } else {
+                pickRandomShrub()
+            }
+        }
+    }
+    func pickRandomGrass() {
+        let grasses = newPlants?.filterGrass()
+        let randomGrassIndex = Int(arc4random_uniform(UInt32(UInt(grasses!.count))))
+        let currentGrass = grasses![randomGrassIndex]
+        for grass in currentRandomGrasses! {
+            if grass.id != currentGrass.id {
+                currentRandomGrasses?.append(currentGrass)
+                allRandomPlants?.append(currentGrass)
+            } else {
+                pickRandomGrass()
+            }
+        }
+    }
+
 
     func didSwitchOnAtIndexPathOfCell(sender: CustomPlantFilterCell) {
 //        let index = tableView.indexPath(for: sender)
 //        if sender.filterLabel.text == filterOptions[0] {
-//            filterHighDroughtTolerance()
+//            let droughtTolerantPlants = newPlants?.filterHighDroughtTolerance(listOfPlants: newPlants!)
 //        }
 //        if sender.filterLabel.text == filterOptions[1] {
-//            filterShadeTolerance()
+//            let shadePlants = newPlants?.filterShadeTolerance(listOfPlants: newPlants!)
 //        }
 //        if sender.filterLabel.text == filterOptions[2] {
-//            filterLeafRetention()
+//            newPlants?.filterLeafRetention()
 //        }
     }
+    
     // MAKE SURE TO ADD FILTER FOR STATE THAT THE USER SEARCHED FOR
     // AFTER THE PLANTS ARE FILTERED, IN PREPARE FOR SEGUE, RANDOMLY CHOOSE 6 PLANTS TO PASS THROUGH TO THE NEXT PAGE
     // 3 PLANTS THAT ARE LOW (GROWTH HABIT: GRAMINOID), 2 PLANTS THAT ARE MEDIUM (GROWTH HABIT:SHRUB), AND 1 THAT IS TALL (GROWTH HABIT: TREE)
