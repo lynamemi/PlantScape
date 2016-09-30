@@ -31,6 +31,21 @@ class SelectedPlantsTableViewController: UITableViewController, CustomPlantFilte
     @IBAction func loadPlantsButtonPressed(_ sender: AnyObject) {
         tableView.reloadData()
     }
+    @IBAction func chooseNewPlantsPressed(_ sender: UIBarButtonItem) {
+        currentRandomTrees = [Plant]()
+        currentRandomShrubs = [Plant]()
+        currentRandomGrasses = [Plant]()
+        allRandomPlants = [Plant]()
+        pickRandomGrass()
+        pickRandomGrass()
+        pickRandomGrass()
+        pickRandomShrub()
+        pickRandomShrub()
+        pickRandomShrub()
+        pickRandomTree()
+        pickRandomTree()
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

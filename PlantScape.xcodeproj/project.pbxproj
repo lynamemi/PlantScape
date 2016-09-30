@@ -48,6 +48,7 @@
 		A8CA88CA1D98862B006F76B5 /* PlantScapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88C91D98862B006F76B5 /* PlantScapeTests.swift */; };
 		A8CA88D51D98862C006F76B5 /* PlantScapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA88D41D98862C006F76B5 /* PlantScapeUITests.swift */; };
 		A8DE89CB1D99706000A380AB /* PlantCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE89CA1D99706000A380AB /* PlantCSV.swift */; };
+		A8F27FE71D9EDEB800BD0963 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F27FE61D9EDEB800BD0963 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		A8CA88D41D98862C006F76B5 /* PlantScapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantScapeUITests.swift; sourceTree = "<group>"; };
 		A8CA88D61D98862C006F76B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8DE89CA1D99706000A380AB /* PlantCSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCSV.swift; sourceTree = "<group>"; };
+		A8F27FE61D9EDEB800BD0963 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B5ADD800BB0C9A873F69A2E9 /* Pods_PlantScape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantScape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F04C80DAB5475374725889 /* Pods_PlantScapeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantScapeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -225,6 +227,7 @@
 				A88804FC1D99E28000D43797 /* usdaPlantsEdited.csv */,
 				A8DE89CA1D99706000A380AB /* PlantCSV.swift */,
 				A8CA88B51D98862B006F76B5 /* Main.storyboard */,
+				A8F27FE61D9EDEB800BD0963 /* HomeViewController.swift */,
 				A801EC5F1D9E26B00031B6F3 /* DesignSpaceViewController.swift */,
 				A801EC5D1D9E208C0031B6F3 /* CancelButtonDelegate.swift */,
 				A801EC5B1D9E1FBF0031B6F3 /* WebViewController.swift */,
@@ -481,6 +484,7 @@
 				A8876B7C1D9CA066007F7864 /* CustomPlantFilterCellDelegate.swift in Sources */,
 				A82A94C71D9DA8FD001E4D33 /* PlantListModel.swift in Sources */,
 				A801EC5C1D9E1FBF0031B6F3 /* WebViewController.swift in Sources */,
+				A8F27FE71D9EDEB800BD0963 /* HomeViewController.swift in Sources */,
 				A8CA88BA1D98862B006F76B5 /* PlantScape.xcdatamodeld in Sources */,
 				A82E5CFF1D9B145000A3C867 /* LocationSelectorViewController.swift in Sources */,
 				A801EC5E1D9E208C0031B6F3 /* CancelButtonDelegate.swift in Sources */,

@@ -55,6 +55,14 @@ class DesignSpaceViewController: UIViewController, UIGestureRecognizerDelegate {
         let screenshot = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         UIImageWriteToSavedPhotosAlbum(screenshot!, nil, nil, nil)
+        
+        let alert = UIAlertController(title: "Saved!", message: "Your drawing has been saved to your photo library", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default) {
+            (action: UIAlertAction!) -> Void in
+            print("ok")
+        }
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 
     

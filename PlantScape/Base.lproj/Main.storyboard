@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vyL-fb-Hhx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a6b-RV-0MN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -10,11 +10,20 @@
         <array key="Raleway-Black.ttf">
             <string>Raleway-Black</string>
         </array>
+        <array key="Raleway-BlackItalic.ttf">
+            <string>Raleway-BlackItalic</string>
+        </array>
         <array key="Raleway-Bold.ttf">
             <string>Raleway-Bold</string>
         </array>
         <array key="Raleway-ExtraLightItalic.ttf">
             <string>Raleway-ExtraLightItalic</string>
+        </array>
+        <array key="Raleway-Italic.ttf">
+            <string>Raleway-Italic</string>
+        </array>
+        <array key="Raleway-Light.ttf">
+            <string>Raleway-Light</string>
         </array>
         <array key="Raleway-LightItalic.ttf">
             <string>Raleway-LightItalic</string>
@@ -100,7 +109,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-143.5" y="123.5"/>
+            <point key="canvasLocation" x="794.39999999999998" y="122.78860569715144"/>
         </scene>
         <!--Draw-->
         <scene sceneID="2dZ-We-kGj">
@@ -186,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgy-Sf-dgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613.60000000000002" y="123.68815592203899"/>
+            <point key="canvasLocation" x="1552.8" y="123.68815592203899"/>
         </scene>
         <!--Design Space View Controller-->
         <scene sceneID="yrU-Rl-Cdn">
@@ -372,7 +381,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1352.8" y="855.9220389805098"/>
+            <point key="canvasLocation" x="2292" y="856"/>
         </scene>
         <!--Selected Plants-->
         <scene sceneID="2dW-rx-hRo">
@@ -387,9 +396,15 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem title="Use These Plants" id="W2M-ZG-XVx">
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="usePlantsSelected:" destination="YPe-8B-wBr" id="ixP-ol-7LO"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem title="Choose New Plants" id="dYc-kC-KPO">
+                                    <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="chooseNewPlantsPressed:" destination="YPe-8B-wBr" id="xVh-Wh-OFp"/>
                                     </connections>
                                 </barButtonItem>
                             </items>
@@ -435,7 +450,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skB-fG-8U9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="124"/>
+            <point key="canvasLocation" x="2292" y="123.68815592203899"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="nF2-Hm-uYx">
@@ -474,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y77-ze-Y3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888.8000000000002" y="122.78860569715144"/>
+            <point key="canvasLocation" x="3828" y="122.78860569715144"/>
         </scene>
         <!--Plant Filters Table View Controller-->
         <scene sceneID="fY3-op-tWf">
@@ -546,23 +561,69 @@
             </objects>
             <point key="canvasLocation" x="-882" y="909"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JtJ-I6-gxe">
+        <!--Home View Controller-->
+        <scene sceneID="TTH-1D-lqa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vyL-fb-Hhx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pQf-e2-cMi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController id="4YX-Gn-Bzr" customClass="HomeViewController" customModule="PlantScape" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7A-Ax-dia"/>
+                        <viewControllerLayoutGuide type="bottom" id="Trj-43-Z7t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpf-mB-pfT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-P7-nRC">
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="0.75" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="lpb-zV-Ewa"/>
+                                    <constraint firstAttribute="width" constant="225" id="pPw-m0-eL1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-BlackItalic" family="Raleway" pointSize="30"/>
+                                <state key="normal" title="Get Started!">
+                                    <color key="titleColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStartedButtonPressed:" destination="4YX-Gn-Bzr" eventType="touchUpInside" id="te3-GK-YaO"/>
+                                    <action selector="saveDrawingButtonPressed:" destination="BKJ-0E-7hS" eventType="touchUpInside" id="m2X-dk-ePm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlantScape" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuQ-pa-hVO">
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="56"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easily add life to your outdoor space!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDl-Lk-Bw8">
+                                <fontDescription key="fontDescription" name="Raleway-Italic" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cDl-Lk-Bw8" secondAttribute="trailing" constant="21" id="0HF-Bi-7UA"/>
+                            <constraint firstItem="QuQ-pa-hVO" firstAttribute="top" secondItem="f7A-Ax-dia" secondAttribute="bottom" constant="113" id="1YV-qe-5mM"/>
+                            <constraint firstItem="Trj-43-Z7t" firstAttribute="top" secondItem="HkN-P7-nRC" secondAttribute="bottom" constant="176" id="4ZW-kr-yyL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QuQ-pa-hVO" secondAttribute="trailing" constant="7" id="DtM-KX-LQy"/>
+                            <constraint firstItem="cDl-Lk-Bw8" firstAttribute="leading" secondItem="HkN-P7-nRC" secondAttribute="trailing" constant="-263" id="Ugi-hl-VHd"/>
+                            <constraint firstItem="QuQ-pa-hVO" firstAttribute="leading" secondItem="wpf-mB-pfT" secondAttribute="leadingMargin" constant="7" id="YPh-Au-xMB"/>
+                            <constraint firstItem="cDl-Lk-Bw8" firstAttribute="top" secondItem="QuQ-pa-hVO" secondAttribute="bottom" constant="19.5" id="ZTn-dg-AtK"/>
+                            <constraint firstItem="QuQ-pa-hVO" firstAttribute="centerX" secondItem="wpf-mB-pfT" secondAttribute="centerX" id="Zed-jc-m4T"/>
+                            <constraint firstItem="cDl-Lk-Bw8" firstAttribute="leading" secondItem="wpf-mB-pfT" secondAttribute="leadingMargin" constant="21" id="bAE-0Z-2tr"/>
+                            <constraint firstItem="cDl-Lk-Bw8" firstAttribute="centerX" secondItem="wpf-mB-pfT" secondAttribute="centerX" id="fFL-cB-01i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HkN-P7-nRC" secondAttribute="trailing" constant="59" id="mW4-0O-ZLH"/>
+                            <constraint firstItem="HkN-P7-nRC" firstAttribute="leading" secondItem="wpf-mB-pfT" secondAttribute="leadingMargin" constant="59" id="oIQ-PB-jRB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="52F-1Z-cef"/>
                     <connections>
-                        <segue destination="grf-iy-rSg" kind="relationship" relationship="rootViewController" id="ax6-vE-HCI"/>
+                        <outlet property="getStartedButton" destination="HkN-P7-nRC" id="PZJ-qs-ehw"/>
+                        <segue destination="grf-iy-rSg" kind="show" identifier="Start" id="YUB-fv-jSB"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sU8-Ot-A1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0g9-fT-NTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882.39999999999998" y="123.68815592203899"/>
+            <point key="canvasLocation" x="16.800000000000001" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SU7-BC-6kn">
@@ -580,7 +641,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjX-dY-cLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2135" y="123"/>
+            <point key="canvasLocation" x="3072.8000000000002" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J2K-9d-c96">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a6b-RV-0MN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xAB-6i-RHb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4YX-Gn-Bzr" kind="relationship" relationship="rootViewController" id="1M9-JV-uCp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSx-wz-pVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742" y="123"/>
         </scene>
     </scenes>
 </document>
