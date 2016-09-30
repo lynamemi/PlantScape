@@ -10,6 +10,12 @@
         <array key="Raleway-Black.ttf">
             <string>Raleway-Black</string>
         </array>
+        <array key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </array>
+        <array key="Raleway-ExtraLightItalic.ttf">
+            <string>Raleway-ExtraLightItalic</string>
+        </array>
         <array key="Raleway-LightItalic.ttf">
             <string>Raleway-LightItalic</string>
         </array>
@@ -28,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-0p-bvR">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                                <frame key="frameInset" width="375" height="250"/>
                             </mapView>
                             <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="search for address" translatesAutoresizingMaskIntoConstraints="NO" id="2zf-TN-27H">
                                 <frame key="frameInset" width="1000" height="1000"/>
@@ -44,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwz-Ut-gT7">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                                <frame key="frameInset" width="375" height="480"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="DFc-ig-KHt"/>
@@ -94,7 +100,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-143.19999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-143.5" y="123.5"/>
         </scene>
         <!--Draw-->
         <scene sceneID="2dZ-We-kGj">
@@ -175,12 +181,300 @@
                         <outlet property="backgroundImageView" destination="15V-BT-AYc" id="C3g-2p-wh4"/>
                         <outlet property="drawImageView" destination="GAK-Me-5Bd" id="eII-Ma-r2f"/>
                         <outlet property="waitingForCSV" destination="7zP-7t-q5f" id="tfY-zZ-NKA"/>
-                        <segue destination="TUc-D0-sTC" kind="show" identifier="PlantFilters" id="EQz-3I-iwT"/>
+                        <segue destination="YPe-8B-wBr" kind="show" identifier="SelectedPlants" id="fHb-Bl-Pw8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgy-Sf-dgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="613.60000000000002" y="123.68815592203899"/>
+        </scene>
+        <!--Design Space View Controller-->
+        <scene sceneID="yrU-Rl-Cdn">
+            <objects>
+                <viewController id="PEc-xS-VDI" customClass="DesignSpaceViewController" customModule="PlantScape" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M63-YE-LNn"/>
+                        <viewControllerLayoutGuide type="bottom" id="4kF-dZ-iIc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RV8-gd-Do6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-nF-c48"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zho-KU-far">
+                                <frame key="frameInset" minX="36" minY="189" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UIy-tb-nNv" appends="YES" id="myb-BN-Tv2"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T7B-DU-NmJ">
+                                <frame key="frameInset" minX="36" minY="249" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4t2-NJ-sOD" appends="YES" id="G8s-RO-wy0"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXb-3g-fLe">
+                                <frame key="frameInset" minX="94" minY="189" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="D1f-Fj-K6c" appends="YES" id="des-J0-13S"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bcl-mD-Ous">
+                                <frame key="frameInset" minX="237" minY="210" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="up3-au-5Pb" appends="YES" id="zmB-7g-5LM"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-sU-rdl">
+                                <frame key="frameInset" minX="229" minY="256" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mQT-zP-3kN" appends="YES" id="xEz-70-OtI"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="job-cz-X9s">
+                                <frame key="frameInset" minX="273" minY="249" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0tv-Mh-9PW" appends="YES" id="WQh-Fi-lkU"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LUt-22-H0x">
+                                <frame key="frameInset" minX="295" minY="210" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rZI-Kh-laz" appends="YES" id="5Sc-s4-lF4"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBO-Dz-GRj">
+                                <frame key="frameInset" minX="141" minY="427" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="S9p-TV-9iW" appends="YES" id="hLS-jL-lVX"/>
+                                    <outletCollection property="gestureRecognizers" destination="rlu-QX-4G2" appends="YES" id="bwj-0I-BzR"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-PG-ppI">
+                                <frame key="frameInset" minX="223" minY="399" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="obv-xI-aeC" appends="YES" id="HBr-Ma-JsV"/>
+                                    <outletCollection property="gestureRecognizers" destination="ySf-SI-46h" appends="YES" id="9SK-Gh-6zf"/>
+                                </connections>
+                            </imageView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-Md-Jlr">
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="16"/>
+                                <state key="normal" title="Save Drawing">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="PEc-xS-VDI" eventType="touchUpInside" id="YJJ-bX-zdD"/>
+                                    <action selector="saveDrawingButtonPressed:" destination="BKJ-0E-7hS" eventType="touchUpInside" id="nBp-LY-zpf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0aE-Md-Jlr" firstAttribute="leading" secondItem="RV8-gd-Do6" secondAttribute="leadingMargin" constant="106" id="27T-Jo-7FZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0aE-Md-Jlr" secondAttribute="bottom" constant="44" id="8GK-dg-4Zq"/>
+                            <constraint firstItem="SQH-nF-c48" firstAttribute="centerX" secondItem="RV8-gd-Do6" secondAttribute="centerX" id="GQX-e6-Obh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0aE-Md-Jlr" secondAttribute="trailing" constant="106" id="L69-5x-qC7"/>
+                            <constraint firstItem="SQH-nF-c48" firstAttribute="top" secondItem="M63-YE-LNn" secondAttribute="bottom" id="Rub-10-lgn"/>
+                            <constraint firstItem="4kF-dZ-iIc" firstAttribute="top" secondItem="0aE-Md-Jlr" secondAttribute="bottom" id="a4o-tI-2CI"/>
+                            <constraint firstAttribute="trailing" secondItem="SQH-nF-c48" secondAttribute="trailing" id="d7n-4F-tCH"/>
+                            <constraint firstItem="0aE-Md-Jlr" firstAttribute="centerX" secondItem="RV8-gd-Do6" secondAttribute="centerX" id="dss-gC-5eG"/>
+                            <constraint firstItem="0aE-Md-Jlr" firstAttribute="top" secondItem="SQH-nF-c48" secondAttribute="bottom" constant="8" id="hEe-t7-T65"/>
+                            <constraint firstItem="0aE-Md-Jlr" firstAttribute="centerX" secondItem="SQH-nF-c48" secondAttribute="centerX" id="t1a-lc-HhK"/>
+                            <constraint firstItem="SQH-nF-c48" firstAttribute="leading" secondItem="RV8-gd-Do6" secondAttribute="leading" id="tfs-kb-76b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="SQH-nF-c48" id="vZ0-KZ-2sB"/>
+                        <outlet property="grass1Image" destination="LUt-22-H0x" id="WMd-iH-1tm"/>
+                        <outlet property="grass2Image" destination="job-cz-X9s" id="yqc-oQ-4bn"/>
+                        <outlet property="grass3Image" destination="Bcl-mD-Ous" id="Ag3-zO-W2q"/>
+                        <outlet property="grass4Image" destination="6aF-sU-rdl" id="nBA-Ym-7tk"/>
+                        <outlet property="shrub1Image" destination="Zho-KU-far" id="mOv-VR-mxZ"/>
+                        <outlet property="shrub2Image" destination="T7B-DU-NmJ" id="c8T-w8-gz7"/>
+                        <outlet property="shrub3Image" destination="lXb-3g-fLe" id="UJl-jg-ESp"/>
+                        <outlet property="tree1Image" destination="SBO-Dz-GRj" id="MRi-3x-VyR"/>
+                        <outlet property="tree2Image" destination="ofW-PG-ppI" id="2VI-y5-lW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoO-3n-X9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="UIy-tb-nNv">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="Cn6-P0-ft8"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4t2-NJ-sOD">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="irS-Gb-8d4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="D1f-Fj-K6c">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="suR-fv-ACo"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="up3-au-5Pb">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="sWn-Hb-2WV"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="mQT-zP-3kN">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="XOR-n4-0V8"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0tv-Mh-9PW">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="eaV-1z-1IK"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="rZI-Kh-laz">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="fpR-sp-WR7"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="S9p-TV-9iW">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="8d4-ZI-Cbs"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="obv-xI-aeC">
+                    <connections>
+                        <action selector="shrub2Move:" destination="PEc-xS-VDI" id="upg-cO-PPO"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="ySf-SI-46h">
+                    <connections>
+                        <action selector="plantTapped:" destination="PEc-xS-VDI" id="nZi-4Y-Xkk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rlu-QX-4G2">
+                    <connections>
+                        <action selector="plantTapped:" destination="PEc-xS-VDI" id="5CF-WB-evD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1352.8" y="855.9220389805098"/>
+        </scene>
+        <!--Selected Plants-->
+        <scene sceneID="2dW-rx-hRo">
+            <objects>
+                <tableViewController title="Selected Plants" id="YPe-8B-wBr" customClass="SelectedPlantsTableViewController" customModule="PlantScape" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="f30-DJ-KfC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="44b-ql-cjw">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Use These Plants" id="W2M-ZG-XVx">
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="usePlantsSelected:" destination="YPe-8B-wBr" id="ixP-ol-7LO"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                            <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </toolbar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectedPlant" textLabel="t1i-ze-ki0" detailTextLabel="voS-QA-Uty" style="IBUITableViewCellStyleValue1" id="G9Q-bC-Heq">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G9Q-bC-Heq" id="kNv-yk-520">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t1i-ze-ki0">
+                                            <frame key="frameInset" minX="15" minY="12" width="37" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="voS-QA-Uty">
+                                            <frame key="frameInset" minX="317" minY="12" width="43" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Raleway-ExtraLightItalic" family="Raleway" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YPe-8B-wBr" id="i5K-Fv-xCq"/>
+                            <outlet property="delegate" destination="YPe-8B-wBr" id="O9O-13-l0Z"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="QKU-zL-ArW" kind="presentation" identifier="Web" id="Uw8-LZ-k8y"/>
+                        <segue destination="PEc-xS-VDI" kind="show" identifier="Design" id="Nre-xq-kFj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skB-fG-8U9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="124"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="nF2-Hm-uYx">
+            <objects>
+                <viewController id="pPF-No-tw6" customClass="WebViewController" customModule="PlantScape" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I38-Uq-dR5"/>
+                        <viewControllerLayoutGuide type="bottom" id="epB-ne-UBQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L4R-GR-Agw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U25-sh-ptc">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U25-sh-ptc" firstAttribute="leading" secondItem="L4R-GR-Agw" secondAttribute="leading" id="Ftr-fC-edN"/>
+                            <constraint firstItem="epB-ne-UBQ" firstAttribute="top" secondItem="U25-sh-ptc" secondAttribute="bottom" id="UGT-a9-hcp"/>
+                            <constraint firstAttribute="trailing" secondItem="U25-sh-ptc" secondAttribute="trailing" id="j0q-Qu-nbm"/>
+                            <constraint firstItem="U25-sh-ptc" firstAttribute="top" secondItem="L4R-GR-Agw" secondAttribute="top" id="pF8-p9-JGe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eGr-i7-ceC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GvW-c0-0Vu">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="pPF-No-tw6" id="btK-Z9-eU1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webSearchView" destination="U25-sh-ptc" id="hb3-X9-EvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y77-ze-Y3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888.8000000000002" y="122.78860569715144"/>
         </scene>
         <!--Plant Filters Table View Controller-->
         <scene sceneID="fY3-op-tWf">
@@ -192,10 +486,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" id="p1F-HD-SWu" customClass="CustomPlantFilterCell" customModule="PlantScape" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p1F-HD-SWu" id="A7A-bC-vJ7">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q1h-H8-jDF">
@@ -232,7 +526,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XID-sT-QHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="124"/>
+            <point key="canvasLocation" x="353" y="856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -269,6 +563,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sU8-Ot-A1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-882.39999999999998" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SU7-BC-6kn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QKU-zL-ArW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cL0-c8-7b2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pPF-No-tw6" kind="relationship" relationship="rootViewController" id="sgm-Eh-Q9R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VjX-dY-cLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2135" y="123"/>
         </scene>
     </scenes>
 </document>

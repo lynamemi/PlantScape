@@ -24,14 +24,14 @@ class PlantList {
                 let csv = try CSV(url: csvURL as NSURL)
                 print("THIRD")
                 csv.enumerateAsDict () { dict in
-                    let plant = Plant(droughtTolerant: dict["DroughtTolerance"]!, shadeLoving: dict["ShadeTolerance"]!, evergreen: dict["LeafRetention"]!, growthHabit: dict["GrowthHabit"]!, states: dict["State"]!, id: dict["betydb.species.id"])
+                    let plant = Plant(droughtTolerant: dict["DroughtTolerance"]!, shadeLoving: dict["ShadeTolerance"]!, evergreen: dict["LeafRetention"]!, growthHabit: dict["GrowthHabit"]!, states: dict["State"]!, id: dict["betydb.species.id"]!, name: dict["CommonName"]!)
                     self.plantList.append(plant)
                 }
                 print("FORTH")
                 self.whenReadyCompletionHandler?()
                 self.ready = true
             } catch {
-                print(error)
+                print("Error in saving plants: \(error)")
             }
         }
     }
@@ -49,21 +49,18 @@ class PlantList {
             list in
             return list.droughtTolerant == "High" || list.droughtTolerant == "Medium"
         }
-        print(filteredDroughtPlants)
     }
     func filterShadeTolerance(listOfPlants: [Plant]) {
         let filteredShadePlants = listOfPlants.filter {
             list in
             return list.shadeLoving == "Tolerant"
         }
-        print(filteredShadePlants)
     }
     func filterLeafRetention(listOfPlants: [Plant]) {
         let filteredEvergreenPlants = listOfPlants.filter {
             list in
             return list.evergreen == "Yes"
         }
-        print(filteredEvergreenPlants)
     }
     
     // add state filter

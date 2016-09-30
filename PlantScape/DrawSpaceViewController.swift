@@ -12,7 +12,7 @@ class DrawSpaceViewController: UIViewController {
     
     var lastPoint: CGPoint!
     var swiped = false
-    var color = UIColor.yellow.cgColor
+    var color = UIColor.orange.cgColor
     var imageDate = Double()
     var drawnImageDate = Double()
     var selectedState: String?
@@ -27,21 +27,21 @@ class DrawSpaceViewController: UIViewController {
     }
     @IBAction func brushColorButtonPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Pick a Brush Color", message: "choose one that you can read easily over your image", preferredStyle: .alert)
-        let changeBrushColorToBlack = UIAlertAction(title: "Black", style: .default) {
+        let changeBrushColorToPurple = UIAlertAction(title: "Purple", style: .default) {
             (action: UIAlertAction!) -> Void in
-            self.color = UIColor.black.cgColor
+            self.color = UIColor.purple.cgColor
         }
         let changeBrushColorToRed = UIAlertAction(title: "Red", style: .default) {
             (action: UIAlertAction!) -> Void in
             self.color = UIColor.red.cgColor
         }
-        let changeBrushColorToYellow = UIAlertAction(title: "Yellow", style: .default) {
+        let changeBrushColorToOrange = UIAlertAction(title: "Orange", style: .default) {
             (action: UIAlertAction!) -> Void in
-            self.color = UIColor.yellow.cgColor
+            self.color = UIColor.orange.cgColor
         }
-        alert.addAction(changeBrushColorToBlack)
+        alert.addAction(changeBrushColorToPurple)
         alert.addAction(changeBrushColorToRed)
-        alert.addAction(changeBrushColorToYellow)
+        alert.addAction(changeBrushColorToOrange)
         present(alert, animated: true, completion: nil)
     }
     
@@ -137,17 +137,18 @@ class DrawSpaceViewController: UIViewController {
             let url = URL(fileURLWithPath: path)
             do {
                 try data?.write(to: url, options: .atomicWrite)
-                performSegue(withIdentifier: "PlantFilters", sender: -1)
+                performSegue(withIdentifier: "SelectedPlants", sender: -1)
             } catch {
                 print(error)
             }
         } else {
             print("doesn't like image")
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! PlantFiltersTableViewController
+        let destination = segue.destination as! SelectedPlantsTableViewController
         destination.drawnImageDate = drawnImageDate
         destination.selectedState = selectedState
         destination.newPlants = newPlants
